@@ -13,8 +13,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -24,12 +22,17 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author pablo
+ * @author mario
+ 
+ */
+/**
+ * 
+ *Entidad que registra la informacion del alumno. 
  */
 @Entity
 @Table(name = "alumno", catalog = "educat04", schema = "")
-@NamedQueries({
-    @NamedQuery(name = "Alumno.findAll", query = "SELECT a FROM Alumno a")})
+
+    
 public class Alumno implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -37,43 +40,45 @@ public class Alumno implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 10)
-    @Column(name = "COD_ALUMNO")
+    @Column(name = "COD_ALUMNO")//Codigo que identifica de manera unica al alumno.
     private String codAlumno;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 150)
     @Column(name = "NOMBRE")
-    private String nombre;
+    private String nombre;//Nombre del alumno.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
     @Column(name = "DIRECCION")
-    private String direccion;
+    private String direccion;//Direccion del alumno.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 15)
     @Column(name = "TELEFONO")
-    private String telefono;
+    private String telefono;//Telefono del alumno.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 128)
     @Column(name = "CORREO_ELECTRONICO")
-    private String correoElectronico;
+    private String correoElectronico;//Correo electronico del alumno.
     @Basic(optional = false)
     @NotNull
     @Column(name = "FECHA_NACIMIENTO")
     @Temporal(TemporalType.DATE)
-    private Date fechaNacimiento;
+    private Date fechaNacimiento;//Fecha de nacimiento del alumno.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 1)
     @Column(name = "GENERO")
-    private String genero;
+    private String genero;//Informacion que del genero del alumno.
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "alumno")
     private Collection<CapacitacionAlumno> capacitacionAlumnoCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "alumno")
     private Collection<ProgramaAlumno> programaAlumnoCollection;
 
+    
+    
     public Alumno() {
     }
 

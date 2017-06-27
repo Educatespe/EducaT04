@@ -17,8 +17,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -28,12 +26,12 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author pablo
+ * @author mario
+ * Entidad que registra la informacion de las capacidataciones.
  */
 @Entity
 @Table(name = "capacitacion", catalog = "educat04", schema = "")
-@NamedQueries({
-    @NamedQuery(name = "Capacitacion.findAll", query = "SELECT c FROM Capacitacion c")})
+
 public class Capacitacion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -41,26 +39,26 @@ public class Capacitacion implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "COD_CAPACITACION")
-    private Integer codCapacitacion;
+    private Integer codCapacitacion;//Codigo que identifica de manera unica a la entidad.
     @Basic(optional = false)
     @NotNull
     @Column(name = "FECHA_INICIO")
     @Temporal(TemporalType.DATE)
-    private Date fechaInicio;
+    private Date fechaInicio;//Fecha de inicio de la capacitacion
     @Basic(optional = false)
     @NotNull
     @Column(name = "FECHA_FIN")
     @Temporal(TemporalType.DATE)
-    private Date fechaFin;
+    private Date fechaFin;//Fecha  que indica el fin de de la capacitacion
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO")
-    private String estado;
+    private String estado;//Estado actual que se encuentra la capacitacion.
     @Basic(optional = false)
     @NotNull
     @Column(name = "CAPACIDAD")
-    private short capacidad;
+    private short capacidad;//Informacion que detalla la capacidad de alumnos que puede haber en la capacitacion.
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "capacitacion")
     private Collection<CapacitacionAlumno> capacitacionAlumnoCollection;
     @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO")

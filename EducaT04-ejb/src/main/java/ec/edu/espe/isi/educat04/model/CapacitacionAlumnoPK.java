@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 /**
  *
  * @author pablo
+ * Entidad que guarda información de la capacitación del alumno.
  */
 @Embeddable
 public class CapacitacionAlumnoPK implements Serializable {

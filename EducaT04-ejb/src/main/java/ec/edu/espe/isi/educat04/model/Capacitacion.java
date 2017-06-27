@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -62,7 +62,7 @@ public class Capacitacion implements Serializable {
     @Column(name = "CAPACIDAD")
     private short capacidad;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "capacitacion")
-    private List<CapacitacionAlumno> capacitacionAlumnoList;
+    private Collection<CapacitacionAlumno> capacitacionAlumnoCollection;
     @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO")
     @ManyToOne(optional = false)
     private Curso codCurso;
@@ -125,12 +125,12 @@ public class Capacitacion implements Serializable {
         this.capacidad = capacidad;
     }
 
-    public List<CapacitacionAlumno> getCapacitacionAlumnoList() {
-        return capacitacionAlumnoList;
+    public Collection<CapacitacionAlumno> getCapacitacionAlumnoCollection() {
+        return capacitacionAlumnoCollection;
     }
 
-    public void setCapacitacionAlumnoList(List<CapacitacionAlumno> capacitacionAlumnoList) {
-        this.capacitacionAlumnoList = capacitacionAlumnoList;
+    public void setCapacitacionAlumnoCollection(Collection<CapacitacionAlumno> capacitacionAlumnoCollection) {
+        this.capacitacionAlumnoCollection = capacitacionAlumnoCollection;
     }
 
     public Curso getCodCurso() {
@@ -171,7 +171,7 @@ public class Capacitacion implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Capacitacion[ codCapacitacion=" + codCapacitacion + " ]";
+        return "ec.edu.espe.isi.educat04.model.Capacitacion[ codCapacitacion=" + codCapacitacion + " ]";
     }
     
 }

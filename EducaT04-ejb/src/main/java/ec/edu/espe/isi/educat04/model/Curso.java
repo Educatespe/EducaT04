@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -57,9 +57,9 @@ public class Curso implements Serializable {
     @Column(name = "ESTADO")
     private String estado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "codCurso")
-    private List<Capacitacion> capacitacionList;
+    private Collection<Capacitacion> capacitacionCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "curso")
-    private List<ProgramaCurso> programaCursoList;
+    private Collection<ProgramaCurso> programaCursoCollection;
 
     public Curso() {
     }
@@ -123,20 +123,20 @@ public class Curso implements Serializable {
         this.estado = estado;
     }
 
-    public List<Capacitacion> getCapacitacionList() {
-        return capacitacionList;
+    public Collection<Capacitacion> getCapacitacionCollection() {
+        return capacitacionCollection;
     }
 
-    public void setCapacitacionList(List<Capacitacion> capacitacionList) {
-        this.capacitacionList = capacitacionList;
+    public void setCapacitacionCollection(Collection<Capacitacion> capacitacionCollection) {
+        this.capacitacionCollection = capacitacionCollection;
     }
 
-    public List<ProgramaCurso> getProgramaCursoList() {
-        return programaCursoList;
+    public Collection<ProgramaCurso> getProgramaCursoCollection() {
+        return programaCursoCollection;
     }
 
-    public void setProgramaCursoList(List<ProgramaCurso> programaCursoList) {
-        this.programaCursoList = programaCursoList;
+    public void setProgramaCursoCollection(Collection<ProgramaCurso> programaCursoCollection) {
+        this.programaCursoCollection = programaCursoCollection;
     }
 
     @Override
@@ -161,7 +161,7 @@ public class Curso implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Curso[ codCurso=" + codCurso + " ]";
+        return "ec.edu.espe.isi.educat04.model.Curso[ codCurso=" + codCurso + " ]";
     }
     
 }

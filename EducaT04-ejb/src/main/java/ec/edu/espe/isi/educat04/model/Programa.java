@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -58,9 +58,9 @@ public class Programa implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fechaFin;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "programa")
-    private List<ProgramaCurso> programaCursoList;
+    private Collection<ProgramaCurso> programaCursoCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "programa")
-    private List<ProgramaAlumno> programaAlumnoList;
+    private Collection<ProgramaAlumno> programaAlumnoCollection;
 
     public Programa() {
     }
@@ -123,20 +123,20 @@ public class Programa implements Serializable {
         this.fechaFin = fechaFin;
     }
 
-    public List<ProgramaCurso> getProgramaCursoList() {
-        return programaCursoList;
+    public Collection<ProgramaCurso> getProgramaCursoCollection() {
+        return programaCursoCollection;
     }
 
-    public void setProgramaCursoList(List<ProgramaCurso> programaCursoList) {
-        this.programaCursoList = programaCursoList;
+    public void setProgramaCursoCollection(Collection<ProgramaCurso> programaCursoCollection) {
+        this.programaCursoCollection = programaCursoCollection;
     }
 
-    public List<ProgramaAlumno> getProgramaAlumnoList() {
-        return programaAlumnoList;
+    public Collection<ProgramaAlumno> getProgramaAlumnoCollection() {
+        return programaAlumnoCollection;
     }
 
-    public void setProgramaAlumnoList(List<ProgramaAlumno> programaAlumnoList) {
-        this.programaAlumnoList = programaAlumnoList;
+    public void setProgramaAlumnoCollection(Collection<ProgramaAlumno> programaAlumnoCollection) {
+        this.programaAlumnoCollection = programaAlumnoCollection;
     }
 
     @Override
@@ -161,7 +161,7 @@ public class Programa implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Programa[ codPrograma=" + codPrograma + " ]";
+        return "ec.edu.espe.isi.educat04.model.Programa[ codPrograma=" + codPrograma + " ]";
     }
     
 }

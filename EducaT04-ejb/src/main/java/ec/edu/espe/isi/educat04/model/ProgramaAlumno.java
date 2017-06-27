@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -113,7 +113,7 @@ public class ProgramaAlumno implements Serializable {
 
     @Override
     public String toString() {
-        return "model.ProgramaAlumno[ programaAlumnoPK=" + programaAlumnoPK + " ]";
+        return "ec.edu.espe.isi.educat04.model.ProgramaAlumno[ programaAlumnoPK=" + programaAlumnoPK + " ]";
     }
     
 }

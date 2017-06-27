@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
  * @author pablo
  */
 @Embeddable
-public class ProgramaCursoPK implements Serializable {
+public class ProgramaAlumnoPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
@@ -26,16 +26,16 @@ public class ProgramaCursoPK implements Serializable {
     private String codPrograma;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 8)
-    @Column(name = "COD_CURSO")
-    private String codCurso;
+    @Size(min = 1, max = 10)
+    @Column(name = "COD_ALUMNO")
+    private String codAlumno;
 
-    public ProgramaCursoPK() {
+    public ProgramaAlumnoPK() {
     }
 
-    public ProgramaCursoPK(String codPrograma, String codCurso) {
+    public ProgramaAlumnoPK(String codPrograma, String codAlumno) {
         this.codPrograma = codPrograma;
-        this.codCurso = codCurso;
+        this.codAlumno = codAlumno;
     }
 
     public String getCodPrograma() {
@@ -46,33 +46,33 @@ public class ProgramaCursoPK implements Serializable {
         this.codPrograma = codPrograma;
     }
 
-    public String getCodCurso() {
-        return codCurso;
+    public String getCodAlumno() {
+        return codAlumno;
     }
 
-    public void setCodCurso(String codCurso) {
-        this.codCurso = codCurso;
+    public void setCodAlumno(String codAlumno) {
+        this.codAlumno = codAlumno;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
         hash += (codPrograma != null ? codPrograma.hashCode() : 0);
-        hash += (codCurso != null ? codCurso.hashCode() : 0);
+        hash += (codAlumno != null ? codAlumno.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ProgramaCursoPK)) {
+        if (!(object instanceof ProgramaAlumnoPK)) {
             return false;
         }
-        ProgramaCursoPK other = (ProgramaCursoPK) object;
+        ProgramaAlumnoPK other = (ProgramaAlumnoPK) object;
         if ((this.codPrograma == null && other.codPrograma != null) || (this.codPrograma != null && !this.codPrograma.equals(other.codPrograma))) {
             return false;
         }
-        if ((this.codCurso == null && other.codCurso != null) || (this.codCurso != null && !this.codCurso.equals(other.codCurso))) {
+        if ((this.codAlumno == null && other.codAlumno != null) || (this.codAlumno != null && !this.codAlumno.equals(other.codAlumno))) {
             return false;
         }
         return true;
@@ -80,7 +80,7 @@ public class ProgramaCursoPK implements Serializable {
 
     @Override
     public String toString() {
-        return "model.ProgramaCursoPK[ codPrograma=" + codPrograma + ", codCurso=" + codCurso + " ]";
+        return "ec.edu.espe.isi.educat04.model.ProgramaAlumnoPK[ codPrograma=" + codPrograma + ", codAlumno=" + codAlumno + " ]";
     }
     
 }

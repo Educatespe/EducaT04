@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -70,9 +70,9 @@ public class Alumno implements Serializable {
     @Column(name = "GENERO")
     private String genero;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "alumno")
-    private List<CapacitacionAlumno> capacitacionAlumnoList;
+    private Collection<CapacitacionAlumno> capacitacionAlumnoCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "alumno")
-    private List<ProgramaAlumno> programaAlumnoList;
+    private Collection<ProgramaAlumno> programaAlumnoCollection;
 
     public Alumno() {
     }
@@ -147,20 +147,20 @@ public class Alumno implements Serializable {
         this.genero = genero;
     }
 
-    public List<CapacitacionAlumno> getCapacitacionAlumnoList() {
-        return capacitacionAlumnoList;
+    public Collection<CapacitacionAlumno> getCapacitacionAlumnoCollection() {
+        return capacitacionAlumnoCollection;
     }
 
-    public void setCapacitacionAlumnoList(List<CapacitacionAlumno> capacitacionAlumnoList) {
-        this.capacitacionAlumnoList = capacitacionAlumnoList;
+    public void setCapacitacionAlumnoCollection(Collection<CapacitacionAlumno> capacitacionAlumnoCollection) {
+        this.capacitacionAlumnoCollection = capacitacionAlumnoCollection;
     }
 
-    public List<ProgramaAlumno> getProgramaAlumnoList() {
-        return programaAlumnoList;
+    public Collection<ProgramaAlumno> getProgramaAlumnoCollection() {
+        return programaAlumnoCollection;
     }
 
-    public void setProgramaAlumnoList(List<ProgramaAlumno> programaAlumnoList) {
-        this.programaAlumnoList = programaAlumnoList;
+    public void setProgramaAlumnoCollection(Collection<ProgramaAlumno> programaAlumnoCollection) {
+        this.programaAlumnoCollection = programaAlumnoCollection;
     }
 
     @Override
@@ -185,7 +185,7 @@ public class Alumno implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Alumno[ codAlumno=" + codAlumno + " ]";
+        return "ec.edu.espe.isi.educat04.model.Alumno[ codAlumno=" + codAlumno + " ]";
     }
     
 }

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package ec.edu.espe.isi.educat04.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -56,7 +56,7 @@ public class Docente implements Serializable {
     @Column(name = "CORREO_ELECTRONICO")
     private String correoElectronico;
     @OneToMany(mappedBy = "codDocente")
-    private List<Capacitacion> capacitacionList;
+    private Collection<Capacitacion> capacitacionCollection;
 
     public Docente() {
     }
@@ -113,12 +113,12 @@ public class Docente implements Serializable {
         this.correoElectronico = correoElectronico;
     }
 
-    public List<Capacitacion> getCapacitacionList() {
-        return capacitacionList;
+    public Collection<Capacitacion> getCapacitacionCollection() {
+        return capacitacionCollection;
     }
 
-    public void setCapacitacionList(List<Capacitacion> capacitacionList) {
-        this.capacitacionList = capacitacionList;
+    public void setCapacitacionCollection(Collection<Capacitacion> capacitacionCollection) {
+        this.capacitacionCollection = capacitacionCollection;
     }
 
     @Override
@@ -143,7 +143,7 @@ public class Docente implements Serializable {
 
     @Override
     public String toString() {
-        return "model.Docente[ codDocente=" + codDocente + " ]";
+        return "ec.edu.espe.isi.educat04.model.Docente[ codDocente=" + codDocente + " ]";
     }
     
 }

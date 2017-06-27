@@ -12,8 +12,6 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -22,10 +20,13 @@ import javax.validation.constraints.Size;
  *
  * @author pablo
  */
+/**
+ * 
+ * Entidad que almacena los cursos que pertenecen a un programa. 
+ */
 @Entity
 @Table(name = "programa_curso", catalog = "educat04", schema = "")
-@NamedQueries({
-    @NamedQuery(name = "ProgramaCurso.findAll", query = "SELECT p FROM ProgramaCurso p")})
+
 public class ProgramaCurso implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,7 +35,7 @@ public class ProgramaCurso implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "ORDEN")
-    private short orden;
+    private short orden; //Secuencia de cursos que se debe seguir.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)

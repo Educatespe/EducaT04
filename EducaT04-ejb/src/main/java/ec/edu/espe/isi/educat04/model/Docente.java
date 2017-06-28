@@ -11,8 +11,6 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -24,8 +22,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "docente", catalog = "educat04", schema = "")
-@NamedQueries({
-    @NamedQuery(name = "Docente.findAll", query = "SELECT d FROM Docente d")})
+
 public class Docente implements Serializable {
 
     private static final long serialVersionUID = 1L;

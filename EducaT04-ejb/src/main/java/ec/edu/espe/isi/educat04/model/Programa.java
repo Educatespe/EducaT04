@@ -34,7 +34,7 @@ public class Programa implements Serializable {
     @NotNull
     @Size(min = 1, max = 8)
     @Column(name = "COD_PROGRAMA")
-    private String codPrograma;
+    private String codPrograma; //Codigo que identifica de manera unica al programa.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)

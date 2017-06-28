@@ -32,7 +32,7 @@ public class Curso implements Serializable {
     @NotNull
     @Size(min = 1, max = 8)
     @Column(name = "COD_CURSO")
-    private String codCurso;
+    private String codCurso; //Codigo que identifica de namera unica al curso.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)

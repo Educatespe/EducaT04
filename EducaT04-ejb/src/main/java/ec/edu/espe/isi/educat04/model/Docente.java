@@ -17,8 +17,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- *
- * @author pablo
+ * 
+ * @author CDK
+ * Entidad que almacena la informaciácion de los docentes que dictan capacitaciones en el instituto.
  */
 @Entity
 @Table(name = "docente", catalog = "educat04", schema = "")
@@ -31,27 +32,27 @@ public class Docente implements Serializable {
     @NotNull
     @Size(min = 1, max = 10)
     @Column(name = "COD_DOCENTE")
-    private String codDocente;
+    private String codDocente; //Clave primaria que corresponde a la cédula de identidad del docente.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 150)
     @Column(name = "NOMBRE")
-    private String nombre;
+    private String nombre;//Nombre que corresponde al docente.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 200)
     @Column(name = "DIRECCION")
-    private String direccion;
+    private String direccion;// Direccion del docente.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 15)
     @Column(name = "TELEFONO")
-    private String telefono;
+    private String telefono; //Telefono del docente.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 128)
     @Column(name = "CORREO_ELECTRONICO")
-    private String correoElectronico;
+    private String correoElectronico; //Correo Electronico del docente.
     @OneToMany(mappedBy = "codDocente")
     private Collection<Capacitacion> capacitacionCollection;
 

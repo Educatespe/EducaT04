@@ -28,7 +28,7 @@ public class ProgramaCurso implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
-    protected ProgramaCursoPK programaCursoPK;
+    protected ProgramaCursoPK programaCursoPK; // Clave pincipal de programa curso.
     @Basic(optional = false)
     @NotNull
     @Column(name = "ORDEN")

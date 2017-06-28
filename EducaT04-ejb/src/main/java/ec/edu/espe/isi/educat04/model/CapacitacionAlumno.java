@@ -35,18 +35,18 @@ public class CapacitacionAlumno implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "NOTA_FINAL")
-    private BigDecimal notaFinal;
+    private BigDecimal notaFinal; //Informacion de la nota fila del alumno.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO")
-    private String estado;
+    private String estado; //Estado en el que se encuentra actualmente al alumno.
     @JoinColumn(name = "COD_ALUMNO", referencedColumnName = "COD_ALUMNO", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Alumno alumno;
+    private Alumno alumno; //Identificador del alumno.
     @JoinColumn(name = "COD_CAPACITACION", referencedColumnName = "COD_CAPACITACION", insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Capacitacion capacitacion;
+    private Capacitacion capacitacion; // Identificador de la capacitacion.
 
     public CapacitacionAlumno() {
     }

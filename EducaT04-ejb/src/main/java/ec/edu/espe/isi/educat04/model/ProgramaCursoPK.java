@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 /**
  *
  * @author pablo
+ * Esta entidad es la que maneja la clave primaria.
  */
 @Embeddable
 public class ProgramaCursoPK implements Serializable {

@@ -17,9 +17,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
 /**
- *
- * @author pablo
+ * 
+ * @author CDK
+ * Entidad que registra información referente a cada curso que oferta el instituto.
  */
 @Entity
 @Table(name = "curso", catalog = "educat04", schema = "")
@@ -37,22 +39,22 @@ public class Curso implements Serializable {
     @NotNull
     @Size(min = 1, max = 100)
     @Column(name = "NOMBRE")
-    private String nombre;
+    private String nombre; //Nombre del curso.
     @Size(max = 4000)
     @Column(name = "OBJETIVO")
-    private String objetivo;
+    private String objetivo; //Objetivo plateado por el curso.
     @Size(max = 4000)
     @Column(name = "DESCRIPCION")
-    private String descripcion;
+    private String descripcion; //Descripcion de cada curso.
     @Basic(optional = false)
     @NotNull
     @Column(name = "DURACION")
-    private short duracion;
+    private short duracion;//Duracion de cada curso.
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO")
-    private String estado;
+    private String estado;//Estado de cada curso y estos estados pueden ser activo o inactivo.
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "codCurso")
     private Collection<Capacitacion> capacitacionCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "curso")

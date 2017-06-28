@@ -17,9 +17,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+
 /**
- *
- * @author pablo
+ * 
+ * @author CDK
+ * Entidad que registra la infomacion de los programas del alumno.
  */
 @Entity
 @Table(name = "capacitacion_alumno", catalog = "educat04", schema = "")

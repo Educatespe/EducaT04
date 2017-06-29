@@ -8,10 +8,8 @@ package ec.edu.espe.isi.educat04.dao;
 import java.util.List;
 import javax.persistence.EntityManager;
 
-/**
- *
- * @author pablo
- */
+
+
 public abstract class AbstractFacade<T> {
 
     private Class<T> entityClass;

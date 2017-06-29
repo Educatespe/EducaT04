@@ -1,4 +1,5 @@
-
+/**Este es el comentario de la clase para el facade*/
+ 
 package ec.edu.espe.isi.educat04.dao;
 
 import java.util.List;

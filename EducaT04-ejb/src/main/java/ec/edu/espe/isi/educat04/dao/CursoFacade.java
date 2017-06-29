@@ -12,10 +12,11 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author sony
+ * @author CDK
  */
 @Stateless
 public class CursoFacade extends AbstractFacade<Curso> {
+
     @PersistenceContext(unitName = "ec.edu.espe.isi.educat04_EducaT04-ejb_ejb_1PU")
     private EntityManager em;
 

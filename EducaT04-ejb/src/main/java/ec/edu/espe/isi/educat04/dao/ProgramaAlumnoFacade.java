@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.isi.educat04.dao;
 
-import ec.edu.espe.isi.educat04.model.Alumno;
+import ec.edu.espe.isi.educat04.model.ProgramaAlumno;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author CDK
  */
 @Stateless
-public class AlumnoFacade extends AbstractFacade<Alumno> {
+public class ProgramaAlumnoFacade extends AbstractFacade<ProgramaAlumno> {
 
     @PersistenceContext(unitName = "ec.edu.espe.isi.educat04_EducaT04-ejb_ejb_1PU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class AlumnoFacade extends AbstractFacade<Alumno> {
         return em;
     }
 
-    public AlumnoFacade() {
-        super(Alumno.class);
+    public ProgramaAlumnoFacade() {
+        super(ProgramaAlumno.class);
     }
     
 }

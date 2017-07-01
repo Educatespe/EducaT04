@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ec.edu.espe.isi.educat04.dao;
 
 import ec.edu.espe.isi.educat04.model.Alumno;
@@ -11,8 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author CDK
+ * Esta clase define al objeto alumno la cual contiene todos sus atributos.
+ * @author: Cristhian J Arevalo.
+ * @version: 1/7/2017.
  */
 @Stateless
 public class AlumnoFacade extends AbstractFacade<Alumno> {

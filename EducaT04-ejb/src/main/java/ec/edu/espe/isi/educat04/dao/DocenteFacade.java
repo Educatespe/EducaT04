@@ -11,8 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author sony
+ * Clase que define al Docente usando el pratron de diseño Facade.
+ * @author Pablo Guallichico
+ * @version 01/07/2017
  */
 @Stateless
 public class DocenteFacade extends AbstractFacade<Docente> {

@@ -11,9 +11,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author CDK
+ * Clase que define el Curso usando el pratron de diseño Facade.
+ * @author Pablo Guallichico
+ * @version 01/07/2017
  */
+
 @Stateless
 public class CursoFacade extends AbstractFacade<Curso> {
 

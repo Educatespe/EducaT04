@@ -11,8 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author CDK
+ * Esta clase define al objeto programa facede la cual contiene todos sus atributos.
+ * @author: Mario Neptalí Catota Guerrero.
+ * @version: 03/07/2017.
  */
 @Stateless
 public class ProgramaFacade extends AbstractFacade<Programa> {

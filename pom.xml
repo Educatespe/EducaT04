@@ -11,6 +11,54 @@
     <module>EducaT04-web</module>
     <module>EducaT04-ejb</module>
   </modules>
+
+  <description>
+      Proyecto para la gestión del instituto NEW HORIZONT, en el cual se podra getionar
+      los alumnos, docentes, cursos y programas.
+  </description>
+  <issueManagement>
+      <url>http://200.69.172.183:8080/projects/ED04/issues/ED04-9?filter=allopenissues</url>
+      <system>Atlasian Issues</system>
+  </issueManagement>
+  <url>http://200.69.172.183:8080/projects/ED04/summary</url>
+  <inceptionYear>2017</inceptionYear>
+  <licenses>
+      <license>
+          <name>MIT License</name>
+          <url>http://www.opensource.org/licenses/mit-license.php</url>
+          <distribution>repo</distribution>
+      </license>
+  </licenses>
+  <developers>
+      <developer>
+          <email>pablomp250@gmail.com</email>
+          <name>Pablo Guallichico</name>
+          <roles>
+              <role>Lider del proyecto y desarrollador</role>
+          </roles>
+          <url>https://github.com/kevinsawicki</url>
+          <id>Pabloespe</id>
+      </developer>
+      <developer>
+          <email>cristhianbrice16@gmail.com</email>
+          <name>Cristhian Arevalo</name>
+          <roles>
+              <role>Desarrollador</role>
+          </roles>
+          <url>https://github.com/Cristhianjo</url>
+          <id>Cristhianjo</id>
+      </developer>
+      <developer>
+          <email>mccatotcorp5@gmail.com</email>
+          <name>Mario Catota</name>
+          <roles>
+              <role>Desarrollador</role>
+          </roles>
+          <url>https://github.com/Catotaespe</url>
+          <id>Catotaespe</id>
+      </developer>
+  </developers>
+    
   <reporting>
         <plugins>
             <plugin>

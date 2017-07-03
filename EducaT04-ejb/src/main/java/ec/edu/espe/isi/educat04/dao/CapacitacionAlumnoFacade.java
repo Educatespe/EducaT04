@@ -9,7 +9,7 @@ import javax.persistence.PersistenceContext;
 /**
  * Clase que registra la informcion de las capacitaciones del alumno. .
  * @author: Cristhian J Arevalo.
- * @version: 3/7/2017.
+ * @version: 1/7/2017.
  */
 @Stateless
 public class CapacitacionAlumnoFacade extends AbstractFacade<CapacitacionAlumno> {

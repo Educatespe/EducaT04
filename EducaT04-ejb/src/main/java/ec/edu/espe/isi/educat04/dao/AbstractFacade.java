@@ -1,10 +1,17 @@
 
+
+
 package ec.edu.espe.isi.educat04.dao;
 
 import java.util.List;
 import javax.persistence.EntityManager;
 
 
+/**
+ * Clase abstracta que fue creada con el paquete dao.
+ * @author: Cristhian J Arevalo.
+ * @version: 1/7/2017.
+ */
 
 public abstract class AbstractFacade<T> {
 

@@ -1,3 +1,7 @@
+/*
+ * MIT Licence
+ * All Right Reserved
+ */
 
 package ec.edu.espe.isi.educat04.dao;
 

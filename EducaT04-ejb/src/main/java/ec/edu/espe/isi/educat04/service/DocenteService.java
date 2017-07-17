@@ -23,6 +23,10 @@
  */
 package ec.edu.espe.isi.educat04.service;
 
+import ec.edu.espe.isi.educat04.dao.DocenteFacade;
+import ec.edu.espe.isi.educat04.model.Docente;
+import java.util.List;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
 
@@ -36,4 +40,10 @@ public class DocenteService {
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+    @EJB
+    private DocenteFacade docenteFacade;
+    
+    public List<Docente>obtenerDocentes(){
+       return this.docenteFacade.findAll();
+    }
 }

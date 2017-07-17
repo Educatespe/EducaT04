@@ -19,6 +19,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
+    <repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Repo</name>
+			<url>http://repository.primefaces.org</url>
+		</repository>
+	</repositories>
+        
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -26,8 +34,24 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-    </dependencies>
-
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ec.edu.espe.isi.educat04</groupId>
+            <artifactId>educat04-ejb</artifactId>
+            <version>1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies> 
+    
+    
+    
+   
+      
+    
     <build>
         <plugins>
             <plugin>

@@ -23,9 +23,9 @@
  */
 package ec.edu.espe.isi.educat04;
 
-import ec.edu.espe.isi.educat04.model.Alumno;
+//import ec.edu.espe.isi.educat04.model.Alumno;
 import ec.edu.espe.isi.educat04.model.Docente;
-import ec.edu.espe.isi.educat04.service.AlumnoService;
+//import ec.edu.espe.isi.educat04.service.AlumnoService;
 import ec.edu.espe.isi.educat04.service.DocenteService;
 import java.util.List;
 import javax.annotation.PostConstruct;
@@ -35,7 +35,9 @@ import javax.faces.bean.ViewScoped;
 
 /**
  *
- * @author pablo
+ * @author Cristhian Arevalo
+ * Lista de docentes
+ * creacion de el metodo inicio que nos obtiene una lista de docentes.
  */
 
 @ManagedBean
@@ -43,23 +45,23 @@ import javax.faces.bean.ViewScoped;
 public class IndexBean {
     
     @EJB
-    //private DocenteService docenteService;
-    //private List<Docente> docente;
-    private AlumnoService alumnoService;
-    private List<Alumno> alumno;
+    private DocenteService docenteService;
+    private List<Docente> docente;
+    //private AlumnoService alumnoService;
+    //private List<Alumno> alumno;
     
     @PostConstruct
     public void inicio(){
-        //this.docente = this.docenteService.obtenerDocentes();
-       this.alumno = this.alumnoService.obtenerAlumnos();
+       this.docente = this.docenteService.obtenerDocentes();
+       //this.alumno = this.alumnoService.obtenerAlumnos();
     }
 
-    /*public List<Docente> getDocente() {
+    public List<Docente> getDocente() {
         return docente;
-    }*/
-       
-    public List<Alumno> getAlumno() {
-        return alumno;
     }
+       
+    //public List<Alumno> getAlumno() {
+      //  return alumno;
+    //}
     
 }

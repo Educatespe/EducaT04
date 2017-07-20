@@ -12,6 +12,25 @@
 <h:body>
 	<h1>Listado de Docentes</h1>
         <br />     
+        <p:dataTable  var="docente" value="#{indexBean.docente}" rows="10"
+                         paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,15">
+            <p:column headerText="Codigo">
+                #{docente.codDocente}
+            </p:column>
+            <p:column headerText="Nombre">
+                #{docente.nombre}
+            </p:column>
+            <p:column headerText="Direccion">
+                #{docente.direccion}
+            </p:column>
+            <p:column headerText="Telefono">
+                #{docente.telefono}
+            </p:column>
+            <p:column headerText="Correo">
+                #{docente.correoElectronico}
+            </p:column>
         </p:dataTable>
 </h:body>
 </html>

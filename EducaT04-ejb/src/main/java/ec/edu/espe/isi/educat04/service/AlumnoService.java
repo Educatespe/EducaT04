@@ -32,7 +32,7 @@ import javax.ejb.LocalBean;
 
 /**
  *
- * @author sony
+ * @authores Mario Catota, Cristhian Arevalo, Pablo Guallichico.
  */
 @Stateless
 @LocalBean
